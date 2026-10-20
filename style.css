@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #132238;
+    background: #ffffff;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #0b1f33;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #ff7a00;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-button {
+    background: #ff7a00;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 620px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 31, 51, 0.98) 0%,
+            rgba(11, 31, 51, 0.88) 35%,
+            rgba(11, 31, 51, 0.35) 65%,
+            rgba(11, 31, 51, 0.05) 100%
+        ),
+        url("images/villanyszerelo-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+}
+.hero-content {
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
+}
+.hero-label,
+.section-label,
+.section-heading p {
+    color: #ff7a00;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.05;
+    margin: 18px 0 25px;
+    max-width: 620px;
+}
+
+.hero h1 span {
+    color: #ff7a00;
+}
+
+.hero-text {
+    color: #d6dee7;
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 16px 26px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-button {
+    background: #ff7a00;
+    color: white;
+}
+
+.secondary-button {
+    border: 2px solid white;
+    color: white;
+}
+
+.services {
+    padding: 100px 9%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 35px 28px;
+    border: 1px solid #e3e7eb;
+    border-radius: 8px;
+    background: white;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-top: 0;
+}
+
+.service-card p {
+    color: #66717e;
+    line-height: 1.7;
+}
+
+.about {
+    padding: 100px 9%;
+    background: #f4f6f8;
+}
+
+.about > div {
+    max-width: 700px;
+}
+
+.about h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.about p {
+    line-height: 1.7;
+}
+
+.contact {
+    text-align: center;
+    padding: 100px 9%;
+    background: #0b1f33;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 42px;
+}
+
+.contact > p:not(.section-label) {
+    color: #d6dee7;
+    margin-bottom: 35px;
+}
+
+footer {
+    background: #071625;
+    color: #9eabb7;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* Mobil */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        min-height: 580px;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .about,
+    .contact {
+        padding: 70px 6%;
+    }
+
+    .about h2,
+    .contact h2,
+    .section-heading h2 {
+        font-size: 34px;
+    }
+}
