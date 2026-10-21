@@ -1,6 +1,4 @@
 ﻿(() => {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
     document.addEventListener('click', (event) => {
         const link = event.target.closest('a[href^="#"]');
         if (!link || event.defaultPrevented || event.button > 0 || event.metaKey ||
@@ -15,7 +13,7 @@
         if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
         target.focus({ preventScroll: true });
         target.scrollIntoView({
-            behavior: reducedMotion.matches ? 'instant' : 'smooth',
+            behavior: 'smooth',
             block: 'start'
         });
 
