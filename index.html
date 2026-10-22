@@ -120,21 +120,54 @@
         </section>
 
 
-        <section id="kapcsolat" class="contact">
-
-            <p class="section-label">KAPCSOLAT</p>
-
-            <h2>Villanyszerelőre van szüksége?</h2>
-
-            <p>
-                Vegye fel velünk a kapcsolatot, és egyeztessünk
-                a szükséges munkáról.
-            </p>
-
-            <a href="tel:+36301234567" class="primary-button">
-                Hívjon most: +36 30 123 4567
-            </a>
-
+        <section id="kapcsolat" class="contact" aria-labelledby="contact-heading">
+            <div class="contact-layout">
+                <div class="contact-intro">
+                    <p class="section-label">KAPCSOLAT · AJÁNLATKÉRÉS</p>
+                    <h2 id="contact-heading">Beszéljünk a következő munkáról!</h2>
+                    <p>Írja meg, milyen villanyszerelési munkára van szüksége Győrben vagy környékén. Adja meg elérhetőségeit és a fontosabb részleteket az egyeztetéshez.</p>
+                    <div class="contact-call">
+                        <p>Inkább telefonon egyeztetne?</p>
+                        <a href="tel:+36301234567" class="primary-button">Hívás: +36 30 123 4567</a>
+                    </div>
+                </div>
+                <form id="quote-form" class="quote-form" action="https://formspree.io/f/mppqvgzg" method="POST" aria-labelledby="quote-heading" aria-describedby="quote-note">
+                    <h3 id="quote-heading">Kérjen ajánlatot egyszerűen</h3>
+                    <p id="quote-note" class="form-note">Adja meg az alábbi adatokat az ajánlatkérés elküldéséhez. Minden mező kitöltése kötelező.</p>
+                    <div class="quote-fields">
+                        <div class="quote-field">
+                            <label for="quote-name">Név</label>
+                            <input id="quote-name" name="Nev" type="text" autocomplete="name" required maxlength="100" placeholder="Teljes neve">
+                        </div>
+                        <div class="quote-field">
+                            <label for="quote-phone">Telefonszám</label>
+                            <input id="quote-phone" name="Telefonszam" type="tel" autocomplete="tel" required maxlength="40" placeholder="Pl. +36 30 123 4567">
+                        </div>
+                        <div class="quote-field quote-field-wide">
+                            <label for="quote-email">E-mail cím</label>
+                            <input id="quote-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="Pl. nev@pelda.hu">
+                        </div>
+                        <div class="quote-field quote-field-wide">
+                            <label for="quote-work">Milyen munkára van szükség?</label>
+                            <select id="quote-work" name="Munka_tipusa" required>
+                                <option value="" disabled selected>Válasszon munkatípust</option>
+                                <option>Villanyszerelés</option>
+                                <option>Hibakeresés és javítás</option>
+                                <option>Lakásfelújítás</option>
+                                <option>Lámpák és szerelvények telepítése</option>
+                                <option>Egyéb / egyeztetést kérek</option>
+                            </select>
+                        </div>
+                        <div class="quote-field quote-field-wide">
+                            <label for="quote-description">Rövid leírás</label>
+                            <textarea id="quote-description" name="Rovid_leiras" rows="4" required maxlength="2000" placeholder="Hol és milyen munkára van szükség? Van tervezett időpont?"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="primary-button quote-submit">Ajánlatot kérek</button>
+                    <p id="quote-status" class="quote-status" role="status" aria-live="polite" hidden></p>
+                    <noscript><p class="form-note">JavaScript nélkül a küldés eredményét a Formspree oldalán láthatja.</p></noscript>
+                </form>
+            </div>
         </section>
 
     </main>
