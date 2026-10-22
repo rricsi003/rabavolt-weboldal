@@ -1,4 +1,4 @@
+# Portfolio demo: indexing is disabled by the noindex, nofollow meta tag.
+# Allow crawling so search engines can read and apply that directive.
 User-agent: *
 Allow: /
-
-Sitemap: https://rabavolt-weboldal.vercel.app/sitemap.xml
